@@ -2,13 +2,13 @@
 
 Arduino Workshop @moreLAb
 
-This sketch is to test the wether the level of a liquid in a tank is empty or full.
-This sketch is a first part of the coffe-machine2.0 @Smartlab
+These set of sketches are to test the wether the level of a liquid in a tank is empty or full.
+all of them are part of the coffe-machine2.0 project @Smartlab
 
-The version 6 tries to post its emty or full state to Twitter after 1 coffe more than the first detection.
-In order to post on Twitter we use the Thing Speak app: Available: https://www.thingspeak.com/apps/thingtweet
-Furthermore, the coffe machine is ready to post when somebody is doing a coffe, the Energy that a coffe make waste and the total 
-Energy consumption and number of coffes after one day of hard work.
+This version 2 demonstrate how to post the water state (emty or full )of the coffe machine to its Twitter account @Social_Coffee.
+In order to post on Twitter we use the Thing Speak social app: Available: https://www.thingspeak.com/apps/thingtweet
+
+Furthermore, the coffe machine post when somebody is doing a coffe and the Energy that a coffe implies to make it. At the end of the day  the coffee machine posts the number of coffes after one day of hard work. 
 
 It is an almost ready version to left the arduino in an stand-alone way. Post energy consumption after 24h
 Note that the Serial constructor and methods are commented to debug only. Uncomment then when you want to see the debug info.
