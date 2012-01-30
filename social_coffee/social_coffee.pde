@@ -1,3 +1,4 @@
+
 /**
 
 Arduino Workshop @moreLAb
@@ -8,7 +9,10 @@ all of them are part of the coffe-machine2.0 project @Smartlab
 This version 2 demonstrate how to post the water state (emty or full )of the coffe machine to its Twitter account @Social_Coffee.
 In order to post on Twitter we use the Thing Speak social app: Available: https://www.thingspeak.com/apps/thingtweet
 
-Furthermore, the coffe machine post when somebody is doing a coffe and the Energy that a coffe implies to make it. At the end of the day  the coffee machine posts the number of coffes after one day of hard work. 
+Furthermore, the coffe machine post when somebody is doing a coffe and the Energy that a coffe implies to make it. At the end of the day  the coffee machine posts the number of coffes after one day of hard work and the total effective Energy that have been used to prepare coffees and the part which have been wasted by misussing the coffee maker. 
+Furthermore, the coffe machine is ready to post when somebody is doing a coffe, the Energy that a coffe make waste and the total 
+Energy consumption and number of coffes after one day of hard work.
+
 
 It is an almost ready version to left the arduino in an stand-alone way. Post energy consumption after 24h
 Note that the Serial constructor and methods are commented to debug only. Uncomment then when you want to see the debug info.
