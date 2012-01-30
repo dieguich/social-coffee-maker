@@ -22,17 +22,25 @@ const byte* getIPbyDHCP(){
 
       switch (state) {  
       case DhcpStateDiscovering:
-        //Serial.print("Discovering servers.");
+#if ECHO_TO_SERIAL  
+        Serial.print("Discovering servers.");
+#endif           
         break;
       case DhcpStateRequesting:
-        //Serial.print("Requesting lease.");
+#if ECHO_TO_SERIAL  
+        Serial.print("Requesting lease.");
+#endif                 
         break;
       case DhcpStateRenewing:
-        //Serial.print("Renewing lease.");
+#if ECHO_TO_SERIAL  
+        Serial.print("Renewing lease.");
+#endif                       
         break;
       case DhcpStateLeased: 
         {
-          //Serial.println("Obtained lease!");
+#if ECHO_TO_SERIAL  
+          Serial.println("Obtained lease!");
+#endif                                 
 
           // Since we're here, it means that we now have a DHCP lease, so we
           // print out some information.
@@ -48,7 +56,9 @@ const byte* getIPbyDHCP(){
       //Serial.print('.');
       if (millis() - previousMillis > interval) {
         previousMillis = millis();
-        //Serial.println("\ntime out");
+#if ECHO_TO_SERIAL  
+        Serial.println("\ntime out");
+#endif                                         
         return NULL;   
       }
     }
@@ -67,7 +77,9 @@ const char* ip_to_str(const uint8_t* ipAddr)
   return buf;
 }
 
-
+/**
+  float to string conversion function that runs standalone
+**/
 char * floatToString(char * outstr, double val, byte precision, byte widthp){
   char temp[16];
   byte i;
